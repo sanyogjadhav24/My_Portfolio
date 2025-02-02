@@ -11,4 +11,4 @@ import FloatingNavDemo  from "@/components/navbar";
 }
 
 
-export default Home();
+export default Home;
