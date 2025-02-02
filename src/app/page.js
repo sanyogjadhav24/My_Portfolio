@@ -1,9 +1,13 @@
 import HomePage from "./components/home";
-import { BackgroundBeamsDemo } from "./components/ui/background-beams";
+import { BackgroundBeamsDemo } from "./components/hero";
 
 export default function Home() {
   return (
-    <div><BackgroundBeamsDemo/></div>
+    <div>
+
+      <BackgroundBeamsDemo/>
+    </div>
+ 
     
 
     
