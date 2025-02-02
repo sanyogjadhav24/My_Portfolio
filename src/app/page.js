@@ -1,6 +1,6 @@
 
 import HomePage from "@/components/home";
-import { FloatingNavDemo } from "@/components/navbar";
+import FloatingNavDemo  from "@/components/navbar";
 
 function Home() {
   return (
