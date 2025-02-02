@@ -11,7 +11,7 @@ const HomePage = () => {
     <div className="min-h-screen bg-black-900 text-white">
       {/* Hero Section */}
 
-     <BackgroundBeamsDemo/>
+     {/* <BackgroundBeamsDemo/> */}
   
         {/* <Projects/> */}
       {/* Skills Section */}
