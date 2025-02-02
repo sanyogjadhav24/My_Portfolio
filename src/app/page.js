@@ -2,7 +2,7 @@
 import HomePage from "@/components/home";
 import FloatingNavDemo  from "@/components/navbar";
 
-function Home() {
+export default function Home() {
   return (
     <div>
       <FloatingNavDemo />
@@ -11,4 +11,4 @@ function Home() {
   );
 }
 
-export default Home();
+
