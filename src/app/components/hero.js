@@ -1,9 +1,9 @@
 "use client";
-import {BackgroundBeams} from "../components/ui/background-beams";
+import {BackgroundBeams} from "./ui/background-beams";
 import React from "react";
 import Typewriter from "react-typewriter-effect";
 import { motion, useScroll, useTransform } from "framer-motion";
-import SkillsShowcase from "../components/skills";
+import SkillsShowcase from "./skills";
 import WorkExperience from "./work_exp";
 
 
