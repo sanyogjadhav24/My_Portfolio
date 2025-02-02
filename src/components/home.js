@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 
-import { BackgroundBeamsDemo } from "./hero";
+import  BackgroundBeamsDemo  from "./hero";
 import Projects from "./projects";
 import Education from "./education";
 import Contact from "./contactme";
