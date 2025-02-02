@@ -78,7 +78,7 @@ const Contact = () => {
       {/* Interactive Background */}
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-black via-gray-900 to-black opacity-90" />
-        <div className="absolute inset-0 bg-[url('/images/grid.svg')] opacity-10" />
+        <div className="absolute inset-0 opacity-10" />
         <div className="absolute inset-0 bg-gradient-to-br from-cyan-600/20 to-blue-600/20 opacity-20 animate-pulse" />
       </div>
 
