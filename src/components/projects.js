@@ -1,6 +1,6 @@
 "use client";
-import  {motion}  from "framer-motion";
-import {useState} from "react";
+import { motion } from "framer-motion";
+import { useState } from "react";
 
 const projects = [
   // DIGITAL FORENSICS
@@ -72,7 +72,7 @@ const projects = [
   }
 ];
 
-const categories = ["ALL", "WEB APP'S", "Data Structure", "MACHINE LEARNING",  "IOT", "MOBILE APPS"];
+const categories = ["ALL", "WEB APP'S", "Data Structure", "MACHINE LEARNING", "IOT", "MOBILE APPS"];
 
 export default function Projects() {
   const [selectedCategory, setSelectedCategory] = useState("ALL");
@@ -158,7 +158,7 @@ export default function Projects() {
                       {project.title}
                     </h3>
                     <span className="text-sm text-gray-400 whitespace-nowrap">
-                      {project.date}
+                      {project.date || "Date not available"}
                     </span>
                   </div>
 
