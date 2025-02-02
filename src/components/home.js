@@ -10,23 +10,23 @@ const HomePage = () => {
   return (
     <div className="min-h-screen bg-black-900 text-white">
       {/* Hero Section */}
-      <section className="bg-black">
+
      <BackgroundBeamsDemo/>
   
-        <Projects/>
+        {/* <Projects/> */}
       {/* Skills Section */}
       
   
 
       {/* Projects Section */}
    
-      <Education/>
+      {/* <Education/> */}
       {/* Contact Section */}
-
+{/* 
       <Contact/>
 
-      <Footer/>
-      </section>
+      <Footer/> */}
+
      
     </div>
     
