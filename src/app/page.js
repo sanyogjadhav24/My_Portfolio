@@ -1,11 +1,7 @@
-import HomePage from "@/components/home";
-
-const Home = () => {
+export default function Home() {
   return (
     <div>
-      <HomePage />
+      Hello i am sanyog
     </div>
   );
 };
-
-export default Home();
