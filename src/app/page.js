@@ -4,16 +4,10 @@ import FloatingNavDemo  from "@/components/navbar";
 
 function Home() {
   return (
-    <div>   <div>
+    <div>
       <FloatingNavDemo />
-      </div>
-
-
-      <div>
      <HomePage/>
     </div>
-    </div>
-
   );
 }
 
