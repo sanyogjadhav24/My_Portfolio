@@ -1,5 +1,5 @@
 "use client";
-import BackgroundBeams  from "../components/ui/background-beams";
+import { BackgroundBeams } from "../components/ui/background-beams";
 import React from "react";
 import Typewriter from "react-typewriter-effect";
 import { motion, useScroll, useTransform } from "framer-motion";
@@ -7,7 +7,7 @@ import SkillsShowcase from "../components/skills";
 import WorkExperience from "./work_exp";
 
 
-export function BackgroundBeamsDemo() {
+export default function BackgroundBeamsDemo() {
   const { scrollYProgress } = useScroll();
   const y = useTransform(scrollYProgress, [0, 1], [0, -200]);
 
