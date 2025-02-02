@@ -1,5 +1,4 @@
-import HomePage from "./components/home";
-import { BackgroundBeamsDemo } from "./components/hero";
+
 import {BackgroundBeams} from "./ui/background-beams";
 import React from "react";
 import Typewriter from "react-typewriter-effect";
