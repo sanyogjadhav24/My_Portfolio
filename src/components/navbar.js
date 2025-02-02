@@ -4,7 +4,7 @@ import { FloatingNav} from "@/components/ui/floating-nav";
 import { FaHome, FaBriefcase, FaCode, FaGraduationCap, FaEnvelope, FaRoute } from 'react-icons/fa';
 import Link from 'next/link'; // Import Link from Next.js
 
-export  function FloatingNavDemo() {
+export default function FloatingNavDemo() {
   const navItems = [
     {
       name: "Home",

@@ -7,7 +7,7 @@ import SkillsShowcase from "../components/skills";
 import WorkExperience from "./work_exp";
 
 
-export default function BackgroundBeamsDemo() {
+export  function BackgroundBeamsDemo() {
   const { scrollYProgress } = useScroll();
   const y = useTransform(scrollYProgress, [0, 1], [0, -200]);
 
