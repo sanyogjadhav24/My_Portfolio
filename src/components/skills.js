@@ -1,50 +1,50 @@
 "use client";
-import Image from 'next/image';
-import  {motion}  from 'framer-motion';
+import Image from "next/image";
+import { motion } from "framer-motion";
 
 const skills = [
   {
-    category: 'Frontend',
+    category: "Frontend",
     technologies: [
-      { name: 'React Js', logo: '/react.svg' },
-      { name: 'Next Js', logo: '/nextjs.svg' },
-      { name: 'HTML', logo: '/html.svg' },
-      { name: 'CSS', logo: '/css.svg' },
-      { name: 'JavaScript', logo: '/js.svg' },
-      { name: 'Bootstrap', logo: '/bootstrap.svg' },
+      { name: "React Js", logo: "react.svg" },
+      { name: "Next Js", logo: "nextjs.svg" },
+      { name: "HTML", logo: "html.svg" },
+      { name: "CSS", logo: "css.svg" },
+      { name: "JavaScript", logo: "js.svg" },
+      { name: "Bootstrap", logo: "bootstrap.svg" },
     ],
   },
   {
-    category: 'Backend',
+    category: "Backend",
     technologies: [
-      { name: 'Node JS', logo: '/nodejs.svg' },
-      { name: 'Python', logo: '/python.svg' },
-      { name: 'MySQL', logo: '/mysql.svg' },
-      { name: 'MongoDB', logo: '/mongodb.svg' },
-      { name: 'Firebase', logo: '/firebase.svg' },
-      { name: 'Cloudinary', logo: '/cloudinary.svg' },
+      { name: "Node JS", logo: "nodejs.svg" },
+      { name: "Python", logo: "python.svg" },
+      { name: "MySQL", logo: "mysql.svg" },
+      { name: "MongoDB", logo: "mongodb.svg" },
+      { name: "Firebase", logo: "firebase.svg" },
+      { name: "Cloudinary", logo: "cloudinary.svg" },
     ],
   },
   {
-    category: 'ML & DS',
+    category: "ML & DS",
     technologies: [
-      { name: 'Excel', logo: '/excel.svg' },
-      { name: 'Python', logo: '/python.svg' },
-      { name: 'Jupyter', logo: '/jupyter.svg' },
-      { name: 'R', logo: '/r.svg' },
-      { name: 'Numpy', logo: '/numpy.svg' },
-      { name: 'Matplotlib', logo: '/matplotlib.svg' },
-      { name: 'Tensorflow', logo: '/tensorflow.svg' },
+      { name: "Excel", logo: "excel.svg" },
+      { name: "Python", logo: "python.svg" },
+      { name: "Jupyter", logo: "jupyter.svg" },
+      { name: "R", logo: "r.svg" },
+      { name: "Numpy", logo: "numpy.svg" },
+      { name: "Matplotlib", logo: "matplotlib.svg" },
+      { name: "Tensorflow", logo: "tensorflow.svg" },
     ],
   },
   {
-    category: 'Others',
+    category: "Others",
     technologies: [
-      { name: 'Git', logo: '/git.svg' },
-      { name: 'GitHub', logo: '/github.svg' },
-      { name: 'Vercel', logo: '/vercel.svg' },
-      { name: 'Netlify', logo: '/netlify.svg' },
-      { name: 'VS Code', logo: '/vscode.svg' },
+      { name: "Git", logo: "git.svg" },
+      { name: "GitHub", logo: "github.svg" },
+      { name: "Vercel", logo: "vercel.svg" },
+      { name: "Netlify", logo: "netlify.svg" },
+      { name: "VS Code", logo: "vscode.svg" },
     ],
   },
 ];
@@ -69,8 +69,7 @@ export default function SkillsShowcase() {
                   key={idx}
                   className="flex items-center bg-gray-800 p-3 rounded-lg space-x-2 hover:bg-gray-700 cursor-pointer"
                 >
-                  <Image src={tech.logo} alt={tech.name} width={30} height={30} />
-                  {/* Hide text on mobile, show text on larger screens */}
+                  <Image src={tech.logo} alt={tech.name} width={30} height={30} unoptimized={true} />
                   <span className="hidden sm:inline-block text-white text-sm">{tech.name}</span>
                 </motion.div>
               ))}
