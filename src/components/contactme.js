@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import  motion  from "framer-motion";
-import { FiMail, FiPhone, FiMapPin } from "react-icons/fi";
+import { FiMail, FiPhone, FiMapPin}  from "react-icons/fi";
 import emailjs from "emailjs-com";
 
 const Contact = () => {
