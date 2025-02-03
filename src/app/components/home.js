@@ -1,35 +1,30 @@
 "use client";
 import React from "react";
 
-import {BackgroundBeamsDemo} from "./hero";
+import BackgroundBeamsDemo from "./hero"; // Ensure the filename matches exactly
 import Projects from "./projects";
 import Education from "./education";
 import Contact from "./contactme";
 import Footer from "./footer";
+
 const HomePage = () => {
   return (
-    <div className="min-h-screen bg-black-900 text-white">
+    <div className="min-h-screen bg-black text-white">
       {/* Hero Section */}
-
-     {/* <BackgroundBeamsDemo/> */}
-  
-        <Projects/>
-      {/* Skills Section */}
-      
-  
+      <BackgroundBeamsDemo />
 
       {/* Projects Section */}
-   
-      <Education/>
+      <Projects />
+
+      {/* Education Section */}
+      <Education />
+
       {/* Contact Section */}
+      <Contact />
 
-      <Contact/>
-
-      <Footer/>
-
-     
+      {/* Footer Section */}
+      <Footer />
     </div>
-    
   );
 };
 
