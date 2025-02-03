@@ -1,11 +1,8 @@
 "use client";
-// import { BackgroundBeams } from "./ui/background-beams";
 import React from "react";
-import Typewriter from "react-typewriter-effect";
 import { motion, useScroll, useTransform } from "framer-motion";
 import SkillsShowcase from "./skills";
 import WorkExperience from "./work_exp";
-
 
 export default function BackgroundBeamsDemo() {
   const { scrollYProgress } = useScroll();
@@ -23,42 +20,39 @@ export default function BackgroundBeamsDemo() {
   };
 
   return (
-   
-    
     <div className="min-h-screen w-full bg-black relative flex flex-col items-center justify-center antialiased overflow-hidden px-4 md:px-6 mt-24">
-
-<div className="max-w-6xl mx-auto p-6 flex flex-col md:flex-row items-center md:items-start w-full">
+      <div className="max-w-6xl mx-auto p-6 flex flex-col md:flex-row items-center md:items-start w-full">
         
         {/* Mobile Image Section - Fixed Visibility */}
-        {/* Mobile Image Section - Fixed with proper z-index */}<motion.div 
-  className="md:hidden flex justify-center mb-6 w-full relative z-20"
-  initial={{ opacity: 0, scale: 0.8 }}
-  animate={{ 
-    opacity: 1, // Keep opacity static after initial animation
-    scale: 1,
-    y: [-10, 10, -10] // Float animation
-  }}
-  transition={{ 
-    y: {
-      duration: 3,
-      repeat: Infinity,
-      ease: "easeInOut",
-    },
-    default: {
-      duration: 0.8,
-      delay: 0.2,
-      type: "spring",
-      stiffness: 100,
-      damping: 10
-    }
-  }}
->
-  <img 
-    src="/profile.jpg" 
-    alt="Sanyog Jadhav" 
-    className="rounded-full w-40 h-40 sm:w-52 sm:h-52 object-cover border-4 border-neutral-800 shadow-lg hover:shadow-xl transition-all duration-300 hover:rotate-3"
-  />
-</motion.div>
+        <motion.div 
+          className="md:hidden flex justify-center mb-6 w-full relative z-20"
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ 
+            opacity: 1, 
+            scale: 1,
+            y: [-10, 10, -10] 
+          }}
+          transition={{ 
+            y: {
+              duration: 3,
+              repeat: Infinity,
+              ease: "easeInOut",
+            },
+            default: {
+              duration: 0.8,
+              delay: 0.2,
+              type: "spring",
+              stiffness: 100,
+              damping: 10
+            }
+          }}
+        >
+          <img 
+            src="/profile.jpg" 
+            alt="Sanyog Jadhav" 
+            className="rounded-full w-40 h-40 sm:w-52 sm:h-52 object-cover border-4 border-neutral-800 shadow-lg hover:shadow-xl transition-all duration-300 hover:rotate-3"
+          />
+        </motion.div>
 
         {/* Text Content Section */}
         <div className="md:w-2/3 text-center md:text-left">
@@ -90,24 +84,6 @@ export default function BackgroundBeamsDemo() {
             </motion.span>
           </motion.h1>
 
-          {/* Typewriter Section */}
-          <motion.div 
-            className="relative z-10 text-lg sm:text-xl md:text-2xl bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-600 font-sans font-bold mt-4 sm:mt-6"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 1, delay: 0.6 }}
-          >
-            <Typewriter
-              text="Software Developer | Fullstack Developer"
-              cursorColor="linear-gradient(to right, #9333ea, #db2777)"
-              typeSpeed={80}
-              deleteSpeed={40}
-              loop={true}
-              cursorStyle="|"
-              wrapperClassName="typewriter-cursor"
-            />
-          </motion.div>
-
           {/* Full Paragraph Section - Preserved Content */}
           <motion.p 
             className="text-neutral-400 max-w-2xl my-4 sm:my-6 text-sm sm:text-base md:text-lg relative z-10 px-2"
@@ -122,35 +98,35 @@ export default function BackgroundBeamsDemo() {
 
           {/* Resume Button Section */}
           <motion.div
-  className="flex flex-col sm:flex-row gap-4 mt-6 sm:mt-8 justify-center sm:justify-start items-center w-full"
-  initial={{ scale: 0 }}
-  animate={{ scale: 1 }}
-  transition={{ type: "spring", delay: 1 }}
->
-  <div className="relative group"> {/* Ensure wrapper is using group for hover and pointer-events handling */}
-    {/* Gradient animation - positioned absolutely within the button wrapper */}
-    <motion.div
-      className="absolute inset-0 bg-gradient-to-r from-pink-600 to-purple-600 opacity-0 pointer-events-none z-10 rounded-lg" // Gradient stays below button
-      animate={{ opacity: [0, 0.3, 0] }}
-      transition={{ duration: 1.5, repeat: Infinity }}
-    />
-    
-    {/* Button with correct z-index */}
-    <motion.a
-      href="/sanyogResume.pdf"
-      target="_blank"
-      rel="noopener noreferrer"
-      className="px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-lg hover:opacity-90 transition-all duration-300 cursor-pointer text-sm sm:text-base relative z-20" // Ensure button has higher z-index
-      whileHover={{ 
-        scale: 1.05,
-        boxShadow: "0 0 20px 5px rgba(192, 132, 252, 0.3)"
-      }}
-      whileTap={{ scale: 0.95 }}
-    >
-      <span className="relative z-10">Resume</span>
-    </motion.a>
-  </div>
-</motion.div>
+            className="flex flex-col sm:flex-row gap-4 mt-6 sm:mt-8 justify-center sm:justify-start items-center w-full"
+            initial={{ scale: 0 }}
+            animate={{ scale: 1 }}
+            transition={{ type: "spring", delay: 1 }}
+          >
+            <div className="relative group">
+              {/* Gradient animation - positioned absolutely within the button wrapper */}
+              <motion.div
+                className="absolute inset-0 bg-gradient-to-r from-pink-600 to-purple-600 opacity-0 pointer-events-none z-10 rounded-lg"
+                animate={{ opacity: [0, 0.3, 0] }}
+                transition={{ duration: 1.5, repeat: Infinity }}
+              />
+              
+              {/* Button with correct z-index */}
+              <motion.a
+                href="/sanyogResume.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-lg hover:opacity-90 transition-all duration-300 cursor-pointer text-sm sm:text-base relative z-20"
+                whileHover={{ 
+                  scale: 1.05,
+                  boxShadow: "0 0 20px 5px rgba(192, 132, 252, 0.3)"
+                }}
+                whileTap={{ scale: 0.95 }}
+              >
+                <span className="relative z-10">Resume</span>
+              </motion.a>
+            </div>
+          </motion.div>
 
         </div>
 
@@ -203,11 +179,6 @@ export default function BackgroundBeamsDemo() {
       >
         <WorkExperience/>
       </motion.div>
-
-
-     
-
-
     </div>
   );
 }
