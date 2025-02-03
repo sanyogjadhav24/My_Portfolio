@@ -17,13 +17,13 @@ const HomePage = () => {
       <Projects />
 
       {/* Education Section */}
-      <Education />
+      {/* <Education /> */}
 
       {/* Contact Section */}
-      <Contact />
+      {/* <Contact /> */}
 
       {/* Footer Section */}
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 };
