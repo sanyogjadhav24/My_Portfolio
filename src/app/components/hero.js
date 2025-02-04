@@ -3,7 +3,6 @@ import React from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import SkillsShowcase from "./skills";
 import WorkExperience from "./work_exp";
-import BackgroundBeamsDemo from "./ui/background-beams"
 
 export default function BackgroundBeamsDemo() {
   const { scrollYProgress } = useScroll();
@@ -22,8 +21,6 @@ export default function BackgroundBeamsDemo() {
 
   return (
     <div className="min-h-screen w-full bg-black relative flex flex-col items-center justify-center antialiased overflow-hidden px-4 md:px-6 mt-24">
-
-    <BackgroundBeamsDemo>
       <div className="max-w-6xl mx-auto p-6 flex flex-col md:flex-row items-center md:items-start w-full">
         
         {/* Mobile Image Section - Fixed Visibility */}
@@ -182,7 +179,6 @@ export default function BackgroundBeamsDemo() {
       >
         <WorkExperience/>
       </motion.div>
-      </BackgroundBeamsDemo>
     </div>
   );
 }
