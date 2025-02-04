@@ -10,7 +10,7 @@ const WorkExperience = () => {
       title: "Intern at IANT",
       description:
         "Developed projects in Python, Java, and Android, contributing to real-world applications. Created a project utilizing AI for automation, improving efficiency by 30%. Gained hands-on experience with RESTful APIs, database management, and Agile workflows. Assisted in software testing and debugging, enhancing system performance.",
-      image: "iant.png",
+      image: "Iant.png",
     },
     {
       title: "Vice President, Cultural Team (GPP)",
