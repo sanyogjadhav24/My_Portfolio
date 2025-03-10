@@ -113,7 +113,7 @@ export default function BackgroundBeamsDemo() {
               
               {/* Button with correct z-index */}
               <motion.a
-                href="/sanyogResume.pdf"
+                href="/Sanyog_Jadhav_Resume.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-lg hover:opacity-90 transition-all duration-300 cursor-pointer text-sm sm:text-base relative z-20"
