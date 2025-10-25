@@ -1,30 +1,37 @@
 "use client";
 import React from "react";
-import  {motion}  from "framer-motion";
-import { FiUser, FiBook, FiStar } from "react-icons/fi";
+import { motion } from "framer-motion";
+import { FiAward, FiBookOpen, FiTrendingUp, FiBook } from "react-icons/fi";
+import { HiAcademicCap, HiStar } from "react-icons/hi";
 
 const Education = () => {
   const educationData = [
     {
-      icon: <FiUser className="w-8 h-8" />,
+      icon: <HiAcademicCap className="w-6 h-6" />,
       degree: "B.Tech in Information Technology",
       institution: "Vishwakarma Institute of Technology, Pune",
-      score: "CGPA: 9.21",
+      score: "CGPA: 9.25",
       year: "2024 - Present",
+      status: "Current",
+      description: "Specializing in software development, data structures, and modern web technologies."
     },
     {
-      icon: <FiBook className="w-8 h-8" />,
+      icon: <FiBook className="w-6 h-6" />,
       degree: "Diploma in Computer Engineering",
       institution: "Government Polytechnic, Pune",
       score: "Percentage: 91.93%",
       year: "2023 - 2024",
+      status: "Completed",
+      description: "Foundation in computer science principles, programming, and engineering mathematics."
     },
     {
-      icon: <FiStar className="w-8 h-8" />,
+      icon: <HiStar className="w-6 h-6" />,
       degree: "10th Grade",
       institution: "Shree Anantrao Kulkarni English Medium School",
       score: "Percentage: 90.20%",
       year: "2020 - 2021",
+      status: "Completed",
+      description: "Strong academic foundation with focus on mathematics and science."
     },
   ];
 
@@ -33,130 +40,187 @@ const Education = () => {
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.3,
-        delayChildren: 0.2,
+        staggerChildren: 0.2,
+        delayChildren: 0.1,
       },
     },
   };
 
-  const itemVariants = {
-    hidden: { opacity: 0, y: 50 },
+  const cardVariants = {
+    hidden: { 
+      opacity: 0, 
+      y: 30,
+      scale: 0.95 
+    },
     visible: {
       opacity: 1,
       y: 0,
+      scale: 1,
       transition: {
         type: "spring",
-        stiffness: 100,
-        damping: 25,
+        stiffness: 200,
+        damping: 30,
+        duration: 0.6
       },
-    },
-    hover: {
-      scale: 1.05,
-      boxShadow: "0px 10px 30px rgba(0, 0, 0, 0.25)",
-      transition: { duration: 0.3 },
-    },
+    }
   };
 
   const iconVariants = {
-    hover: {
-      rotate: 360,
-      scale: 1.3,
-      transition: { duration: 0.6 },
-    },
+    rest: { scale: 1 },
+    hover: { 
+      scale: 1.1,
+      transition: { 
+        duration: 0.2,
+        ease: "easeInOut" 
+      }
+    }
   };
 
   return (
-    <section className="min-h-screen bg-black py-20 px-6 sm:px-8 lg:px-12 relative overflow-hidden">
-      {/* Interactive Background */}
-      <div className="absolute inset-0 z-0">
-        <div className="absolute inset-0 bg-black via-gray-900 to-black opacity-90" />
-        <div className="absolute inset-0 bg-[url('/images/grid.svg')] opacity-10" />
-        <div className="absolute inset-0 bg-gradient-to-br from-cyan-600/20 to-blue-600/20 opacity-20 animate-pulse" />
-      </div>
-
-      <div className="relative z-10 max-w-7xl mx-auto">
-        <motion.h2
-          initial={{ opacity: 0, y: -50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ type: "spring", stiffness: 50 }}
-          className="text-3xl sm:text-4xl md:text-5xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400 text-center mb-12 sm:mb-16"
-        >
-          My Academic Journey
-        </motion.h2>
-
+    <section 
+      className="py-24 px-6 relative overflow-hidden"
+      style={{ background: 'var(--bg-primary)' }}
+    >
+      <div className="max-w-6xl mx-auto relative z-10">
+        {/* Header */}
         <motion.div
-          className="relative"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, ease: [0.4, 0, 0.2, 1] }}
+          viewport={{ once: true }}
+          className="text-center mb-16"
+        >
+          <div className="inline-flex items-center gap-2 mb-4">
+            <FiBookOpen 
+              className="w-5 h-5" 
+              style={{ color: 'var(--accent-primary)' }} 
+            />
+            <span 
+              className="text-sm font-medium tracking-wide uppercase"
+              style={{ color: 'var(--text-muted)' }}
+            >
+              Academic Journey
+            </span>
+          </div>
+          <h2 
+            className="text-4xl md:text-5xl font-bold mb-4"
+            style={{ color: 'var(--text-primary)' }}
+          >
+            Education & Learning
+          </h2>
+          <p 
+            className="text-lg max-w-2xl mx-auto"
+            style={{ color: 'var(--text-secondary)' }}
+          >
+            A continuous journey of learning and academic excellence in technology and innovation
+          </p>
+        </motion.div>
+
+        {/* Education Timeline */}
+        <motion.div
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, margin: "-100px" }}
+          viewport={{ once: true, margin: "-50px" }}
+          className="space-y-8"
         >
-          {/* Timeline line */}
-          <div className="absolute left-1/2 w-1 h-full bg-gradient-to-b from-cyan-400 to-blue-400 transform -translate-x-1/2 sm:block hidden" />
-
           {educationData.map((edu, index) => (
             <motion.div
               key={index}
-              variants={itemVariants}
-              whileHover="hover"
-              className="relative flex flex-col sm:flex-row items-center justify-between mb-12 w-full"
-              style={{
-                flexDirection: index % 2 === 0 ? "row" : "row-reverse",
-              }}
+              variants={cardVariants}
+              whileHover={{ y: -4 }}
+              className="group relative"
             >
-              {/* Content */}
-              <div className="w-full sm:w-5/12 p-6 sm:p-8 bg-gray-900/80 rounded-3xl border-2 border-gray-800 shadow-lg relative mb-6 sm:mb-0">
-                {/* Icon */}
-                <motion.div
-                  variants={iconVariants}
-                  className="absolute -top-8 -left-8 w-12 h-12 bg-cyan-500 rounded-full flex items-center justify-center text-gray-900 shadow-2xl"
-                >
-                  {edu.icon}
-                </motion.div>
+              <div 
+                className="p-8 rounded-2xl border transition-all duration-300 backdrop-blur-sm hover:shadow-xl"
+                style={{ 
+                  background: 'var(--bg-elevated)',
+                  borderColor: 'var(--border-primary)',
+                  boxShadow: '0 4px 24px rgba(0, 0, 0, 0.1)'
+                }}
+              >
+                <div className="flex flex-col lg:flex-row lg:items-center gap-6">
+                  {/* Icon and Status */}
+                  <div className="flex items-center gap-4">
+                    <motion.div
+                      variants={iconVariants}
+                      initial="rest"
+                      whileHover="hover"
+                      className="p-4 rounded-xl flex items-center justify-center"
+                      style={{ background: 'var(--bg-secondary)' }}
+                    >
+                      <div style={{ color: 'var(--accent-primary)' }}>
+                        {edu.icon}
+                      </div>
+                    </motion.div>
+                    <div className="flex items-center gap-2">
+                      <div 
+                        className="w-2 h-2 rounded-full"
+                        style={{ 
+                          backgroundColor: edu.status === 'Current' ? 'var(--accent-primary)' : '#10B981'
+                        }}
+                      />
+                      <span 
+                        className="text-sm font-medium"
+                        style={{ 
+                          color: edu.status === 'Current' ? 'var(--accent-primary)' : '#10B981'
+                        }}
+                      >
+                        {edu.status}
+                      </span>
+                    </div>
+                  </div>
 
-                {/* Degree */}
-                <h3 className="text-xl sm:text-2xl font-semibold text-gray-100 mb-3">
-                  {edu.degree}
-                </h3>
-
-                {/* Institution */}
-                <p className="text-sm sm:text-base text-gray-400 mb-4">{edu.institution}</p>
-
-                {/* Score and Year */}
-                <div className="flex items-center justify-between">
-                  <span className="text-cyan-400 font-semibold text-sm sm:text-base">{edu.score}</span>
-                  <span className="text-gray-300 bg-gray-800/60 px-4 py-2 rounded-full text-xs sm:text-sm">
-                    {edu.year}
-                  </span>
+                  {/* Content */}
+                  <div className="flex-1">
+                    <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-3">
+                      <h3 
+                        className="text-xl font-semibold"
+                        style={{ color: 'var(--text-primary)' }}
+                      >
+                        {edu.degree}
+                      </h3>
+                      <div className="flex items-center gap-4 mt-2 md:mt-0">
+                        <span 
+                          className="text-sm font-medium px-3 py-1 rounded-lg"
+                          style={{ 
+                            background: 'var(--bg-secondary)',
+                            color: 'var(--text-secondary)' 
+                          }}
+                        >
+                          {edu.year}
+                        </span>
+                        <span 
+                          className="font-semibold"
+                          style={{ color: 'var(--accent-primary)' }}
+                        >
+                          {edu.score}
+                        </span>
+                      </div>
+                    </div>
+                    
+                    <p 
+                      className="font-medium mb-2"
+                      style={{ color: 'var(--text-secondary)' }}
+                    >
+                      {edu.institution}
+                    </p>
+                    
+                    <p 
+                      className="text-sm leading-relaxed"
+                      style={{ color: 'var(--text-muted)' }}
+                    >
+                      {edu.description}
+                    </p>
+                  </div>
                 </div>
               </div>
-
-              {/* Connector */}
-              <div className="w-1/12 flex items-center justify-center sm:block hidden">
-                <div className="w-6 h-6 bg-cyan-400 rounded-full" />
-              </div>
-
-              {/* Empty Space */}
-              <div className="w-full sm:w-5/12" />
             </motion.div>
           ))}
         </motion.div>
 
-        {/* Animated scroll indicator */}
-        <motion.div
-          className="mt-12 sm:mt-16 flex justify-center"
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ repeat: Infinity, duration: 2 }}
-        >
-          <div className="w-8 h-12 sm:w-10 sm:h-16 rounded-3xl border-2 border-cyan-400 flex justify-center items-center p-2 sm:p-3">
-            <motion.div
-              className="w-2 h-2 sm:w-3 sm:h-3 bg-cyan-400 rounded-full"
-              animate={{ y: [0, 20, 0] }}
-              transition={{ duration: 1.5, repeat: Infinity }}
-            />
-          </div>
-        </motion.div>
+        {/* Academic Stats */}
+       
       </div>
     </section>
   );

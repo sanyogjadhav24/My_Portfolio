@@ -1,34 +1,78 @@
 "use client";
-import{motion} from "framer-motion";
+import { motion } from "framer-motion";
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
-import { FaChevronLeft, FaChevronRight } from "react-icons/fa"; // Import icons for arrows
+import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
+import { FiBriefcase, FiCalendar, FiMapPin, FiTrendingUp } from "react-icons/fi";
+import { HiOutlineOfficeBuilding } from "react-icons/hi";
 
 const WorkExperience = () => {
   const experiences = [
     {
-      title: "Intern at IANT",
-      description:
-        "Developed projects in Python, Java, and Android, contributing to real-world applications. Created a project utilizing AI for automation, improving efficiency by 30%. Gained hands-on experience with RESTful APIs, database management, and Agile workflows. Assisted in software testing and debugging, enhancing system performance.",
-      image: "Iant.png",
+      role: "SDE Intern",
+      company: "Cyber Unbound",
+      period: "Jun 2025 - Present",
+      location: "Remote",
+      type: "Internship",
+      description: "Working with Next.js and MongoDB to build an admin panel, a certificate-based authenticator for secure certificate issuance/verification, and an email automation system for notifications and onboarding. Implemented RESTful APIs, integrated third-party services, and improved deployment and testing workflows during the internship.",
+      image: "cyberunbound.svg",
+      skills: ["Next.js", "MongoDB", "RESTful APIs", "Email Automation"],
+      current: true
     },
     {
-      title: "Vice President, Cultural Team (GPP)",
-      description:
-        "Led a 50-member team to organize college cultural events, ensuring smooth execution of multiple large-scale programs. Spearheaded innovative event ideas that boosted participation. Managed budgeting, sponsorships, and team coordination. Introduced digital management systems, improving efficiency and outreach.",
+      role: "Vice President", 
+      company: "Indus Connect",
+      period: "2024 - Present",
+      location: "VIT Pune",
+      type: "Leadership",
+      description: "Led Indus Connect as Vice President — driving industry-academia partnerships, organizing tech talks, hackathons and workshops, expanding membership and outreach, securing sponsorships, and mentoring teams on product development and collaboration.",
       image: "cultural.webp",
+      skills: ["Leadership", "Event Management", "Partnerships", "Mentoring"],
+      current: true
     },
     {
-      title: "Creative Coordinator (VIT Pune)",
-      description:
-        "Handled creative direction for events, designing posters, banners, and merchandise. Worked on branding strategies that enhanced event visibility. Collaborated with different teams to maintain a cohesive visual theme. Organized and executed creative workshops, mentoring students in design principles and tools like Adobe Suite.",
-      image: "creative.jpg",
+      role: "Software Development Intern",
+      company: "IANT",
+      period: "2024",
+      location: "Pune",
+      type: "Internship", 
+      description: "Developed projects in Python, Java, and Android, contributing to real-world applications. Created a project utilizing AI for automation, improving efficiency by 30%. Gained hands-on experience with RESTful APIs, database management, and Agile workflows.",
+      image: "Iant.png",
+      skills: ["Python", "Java", "Android", "AI", "RESTful APIs"],
+      current: false
     },
     {
-      title: "Technical Coordinator",
-      description:
-        "Developed and maintained technical projects, including a gamified learning platform and a real-time multiplayer quiz game using socket programming. Conducted hands-on workshops on web development, Firebase authentication, and AI integration. Led the development of various college projects, optimizing performance and security.",
+      role: "Vice President",
+      company: "Cultural Team (GPP)",
+      period: "2023 - 2024", 
+      location: "VIT Pune",
+      type: "Leadership",
+      description: "Led a 50-member team to organize college cultural events, ensuring smooth execution of multiple large-scale programs. Spearheaded innovative event ideas that boosted participation by 40%. Managed budgets and sponsorships worth ₹2L+.",
+      image: "cultural.webp",
+      skills: ["Team Leadership", "Event Planning", "Budget Management", "Sponsorships"],
+      current: false
+    },
+    {
+      role: "Creative Coordinator",
+      company: "VIT Pune", 
+      period: "2023",
+      location: "Pune",
+      type: "Volunteer",
+      description: "Handled creative direction for events, designing posters, banners, and merchandise. Worked on branding strategies that enhanced event visibility by 60%. Organized creative workshops, mentoring 100+ students in design principles.",
+      image: "creative.jpg", 
+      skills: ["Graphic Design", "Branding", "Adobe Suite", "Workshop Delivery"],
+      current: false
+    },
+    {
+      role: "Technical Coordinator",
+      company: "VIT Pune",
+      period: "2022 - 2023",
+      location: "Pune", 
+      type: "Volunteer",
+      description: "Developed and maintained technical projects, including a gamified learning platform and a real-time multiplayer quiz game using socket programming. Conducted hands-on workshops on web development, Firebase authentication, and AI integration.",
       image: "technical.webp",
+      skills: ["Web Development", "Socket Programming", "Firebase", "AI Integration"],
+      current: false
     },
   ];
 
@@ -118,94 +162,251 @@ const WorkExperience = () => {
   };
 
   return (
-    <section className="bg-gradient-to-b from-black via-[#0A0416] to-black text-white py-24 px-4 sm:px-8 relative">
-      <div className="max-w-7xl mx-auto">
-        <motion.h2
-          className="text-4xl font-bold mb-16 text-center bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent"
-          initial={{ opacity: 0, y: 30 }}
+    <section 
+      className="py-24 px-6 relative overflow-hidden"
+      style={{ background: 'var(--bg-primary)' }}
+    >
+      <div className="max-w-6xl mx-auto relative z-10">
+        {/* Header */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.8 }}
+          transition={{ duration: 0.6, ease: [0.4, 0, 0.2, 1] }}
+          viewport={{ once: true }}
+          className="text-center mb-16"
         >
-          Professional Journey
-        </motion.h2>
+          <div className="inline-flex items-center gap-2 mb-4">
+            <FiBriefcase 
+              className="w-5 h-5" 
+              style={{ color: 'var(--accent-primary)' }} 
+            />
+            <span 
+              className="text-sm font-medium tracking-wide uppercase"
+              style={{ color: 'var(--text-muted)' }}
+            >
+              Professional Journey
+            </span>
+          </div>
+          <h2 
+            className="text-4xl md:text-5xl font-bold mb-4"
+            style={{ color: 'var(--text-primary)' }}
+          >
+            Work Experience
+          </h2>
+          <p 
+            className="text-lg max-w-2xl mx-auto"
+            style={{ color: 'var(--text-secondary)' }}
+          >
+            A journey through diverse roles in technology, leadership, and innovation
+          </p>
+        </motion.div>
 
-        {/* Horizontal Scrollable Container */}
+        {/* Experience Timeline */}
         <div className="relative">
+          {/* Timeline Line - Desktop */}
+          <div className="hidden lg:block absolute left-8 top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-gray-300 to-transparent" style={{ background: 'linear-gradient(to bottom, transparent, var(--border-primary), transparent)' }}></div>
+
           <motion.div
-            ref={containerRef}
-            className="overflow-x-auto lg:overflow-visible no-scrollbar"
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, margin: "-100px" }}
+            viewport={{ once: true, margin: "-50px" }}
+            className="space-y-12"
           >
-            <div className="flex lg:grid lg:grid-cols-2 lg:gap-8 w-max lg:w-full">
-              {experiences.map((experience, index) => (
+            {experiences.map((experience, index) => (
+              <motion.div
+                key={index}
+                variants={cardVariants}
+                className="relative"
+              >
+                {/* Timeline Dot - Desktop */}
+                <div className="hidden lg:flex absolute left-6 top-8 w-4 h-4 rounded-full border-4 items-center justify-center z-10" style={{ 
+                  background: experience.current ? 'var(--accent-primary)' : 'var(--bg-primary)',
+                  borderColor: experience.current ? 'var(--accent-primary)' : 'var(--border-primary)'
+                }}>
+                  {experience.current && (
+                    <div className="w-1.5 h-1.5 rounded-full" style={{ background: 'var(--bg-primary)' }}></div>
+                  )}
+                </div>
+
+                {/* Experience Card */}
                 <motion.div
-                  key={index}
-                  variants={cardVariants}
-                  whileHover="hover"
-                  className="group relative bg-gradient-to-br from-[#1A0933] to-[#0D041F] p-8 rounded-2xl border border-transparent hover:border-[#3A1B6E] transition-all duration-300 flex-shrink-0 w-[300px] sm:w-[400px] lg:w-full mx-4 lg:mx-0"
-                  style={{
-                    boxShadow: "0 4px 24px rgba(88, 51, 163, 0.1)",
+                  whileHover={{ y: -4, scale: 1.01 }}
+                  className="lg:ml-16 group relative p-8 rounded-2xl border transition-all duration-300 backdrop-blur-sm"
+                  style={{ 
+                    background: 'var(--bg-elevated)',
+                    borderColor: 'var(--border-primary)',
+                    boxShadow: '0 4px 24px rgba(0, 0, 0, 0.1)'
                   }}
                 >
-                  <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-purple-500/20 to-pink-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  {/* Current Position Indicator */}
+                  {experience.current && (
+                    <div className="absolute top-6 right-6 px-3 py-1 rounded-full text-xs font-semibold border" style={{
+                      background: 'var(--accent-primary)' + '15',
+                      borderColor: 'var(--accent-primary)',
+                      color: 'var(--accent-primary)'
+                    }}>
+                      Current
+                    </div>
+                  )}
 
-                  <div className="relative flex flex-col sm:flex-row sm:items-start items-center space-y-4 sm:space-y-0 sm:space-x-6 z-10">
+                  <div className="flex flex-col lg:flex-row lg:items-start gap-6">
+                    {/* Company Logo */}
                     <motion.div
-                      className="flex-shrink-0 relative"
-                      whileHover={{ scale: 1.15 }}
+                      whileHover={{ scale: 1.1, rotate: 5 }}
+                      className="flex-shrink-0"
                     >
-                      <div className="absolute inset-0 bg-purple-500/30 blur-[20px] rounded-full" />
-                      <Image
-                        src={`/${experience.image}`}
-                        width={80}
-                        height={80}
-                        alt="Icon"
-                        className="rounded-lg transform transition-transform duration-300 object-contain p-2"
-                      />
+                      <div 
+                        className="w-16 h-16 rounded-xl p-3 flex items-center justify-center"
+                        style={{ background: 'var(--bg-secondary)' }}
+                      >
+                        <Image
+                          src={`/${experience.image}`}
+                          width={40}
+                          height={40}
+                          alt={`${experience.company} logo`}
+                          className="rounded-lg object-contain"
+                        />
+                      </div>
                     </motion.div>
 
-                    <div className="flex-1 text-center sm:text-left">
-                      <motion.h3
-                        className="text-xl font-semibold mb-3 bg-gradient-to-r from-purple-300 to-pink-300 bg-clip-text text-transparent"
-                        whileHover={{ scale: 1.05 }}
+                    {/* Experience Details */}
+                    <div className="flex-1 min-w-0">
+                      <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-3">
+                        <div>
+                          <h3 
+                            className="text-xl font-bold mb-1"
+                            style={{ color: 'var(--text-primary)' }}
+                          >
+                            {experience.role}
+                          </h3>
+                          <p 
+                            className="text-lg font-semibold"
+                            style={{ color: 'var(--accent-primary)' }}
+                          >
+                            {experience.company}
+                          </p>
+                        </div>
+                        
+                        <div className="flex flex-wrap gap-2 mt-2 lg:mt-0">
+                          <span 
+                            className="inline-flex items-center gap-1 px-3 py-1 rounded-lg text-sm font-medium"
+                            style={{ 
+                              background: 'var(--bg-secondary)',
+                              color: 'var(--text-secondary)'
+                            }}
+                          >
+                            <FiCalendar className="w-3 h-3" />
+                            {experience.period}
+                          </span>
+                          <span 
+                            className="inline-flex items-center gap-1 px-3 py-1 rounded-lg text-sm font-medium"
+                            style={{ 
+                              background: 'var(--bg-secondary)',
+                              color: 'var(--text-secondary)'
+                            }}
+                          >
+                            <FiMapPin className="w-3 h-3" />
+                            {experience.location}
+                          </span>
+                        </div>
+                      </div>
+
+                      <div className="mb-4">
+                        <span 
+                          className="inline-block px-3 py-1 rounded-full text-sm font-medium"
+                          style={{
+                            background: experience.type === 'Internship' 
+                              ? '#F59E0B15' 
+                              : experience.type === 'Leadership' 
+                              ? '#8B5CF615'
+                              : '#10B98115',
+                            color: experience.type === 'Internship' 
+                              ? '#F59E0B' 
+                              : experience.type === 'Leadership' 
+                              ? '#8B5CF6'
+                              : '#10B981'
+                          }}
+                        >
+                          {experience.type}
+                        </span>
+                      </div>
+
+                      <p 
+                        className="text-sm leading-relaxed mb-4"
+                        style={{ color: 'var(--text-secondary)' }}
                       >
-                        {experience.title}
-                      </motion.h3>
-                      <p className="text-gray-300 text-sm leading-relaxed mb-4">
                         {experience.description}
                       </p>
+
+                      {/* Skills Tags */}
+                      <div className="flex flex-wrap gap-2">
+                        {experience.skills.map((skill, skillIndex) => (
+                          <motion.span
+                            key={skillIndex}
+                            whileHover={{ scale: 1.05 }}
+                            className="px-3 py-1 rounded-lg text-xs font-medium transition-colors cursor-default"
+                            style={{ 
+                              background: 'var(--accent-primary)' + '10',
+                              color: 'var(--accent-primary)',
+                              border: `1px solid var(--accent-primary)25`
+                            }}
+                          >
+                            {skill}
+                          </motion.span>
+                        ))}
+                      </div>
                     </div>
                   </div>
                 </motion.div>
-              ))}
-            </div>
+              </motion.div>
+            ))}
           </motion.div>
-
-          {/* Arrows for Mobile */}
-          {showLeftArrow && (
-            <button
-              onClick={scrollLeft}
-              className="absolute left-2 top-1/2 transform -translate-y-1/2 bg-purple-500/30 p-3 rounded-full backdrop-blur-sm hover:bg-purple-500/50 transition-all duration-300 lg:hidden"
-              style={{ zIndex: 10 }}
-            >
-              <FaChevronLeft className="text-white" />
-            </button>
-          )}
-
-          {showRightArrow && (
-            <button
-              onClick={scrollRight}
-              className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-purple-500/30 p-3 rounded-full backdrop-blur-sm hover:bg-purple-500/50 transition-all duration-300 lg:hidden"
-              style={{ zIndex: 10 }}
-            >
-              <FaChevronRight className="text-white" />
-            </button>
-          )}
         </div>
+
+        {/* Stats Summary */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          viewport={{ once: true }}
+          className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-6"
+        >
+          {[
+            { icon: <FiBriefcase className="w-5 h-5" />, label: "Total Roles", value: "6+" },
+            { icon: <FiTrendingUp className="w-5 h-5" />, label: "Years Experience", value: "3+" },
+            { icon: <HiOutlineOfficeBuilding className="w-5 h-5" />, label: "Organizations", value: "4+" }
+          ].map((stat, index) => (
+            <motion.div
+              key={index}
+              whileHover={{ y: -2 }}
+              className="text-center p-6 rounded-xl border"
+              style={{ 
+                background: 'var(--bg-elevated)',
+                borderColor: 'var(--border-primary)'
+              }}
+            >
+              <div 
+                className="inline-flex items-center justify-center mb-3"
+                style={{ color: 'var(--accent-primary)' }}
+              >
+                {stat.icon}
+              </div>
+              <div 
+                className="text-2xl font-bold mb-1"
+                style={{ color: 'var(--text-primary)' }}
+              >
+                {stat.value}
+              </div>
+              <div 
+                className="text-sm"
+                style={{ color: 'var(--text-muted)' }}
+              >
+                {stat.label}
+              </div>
+            </motion.div>
+          ))}
+        </motion.div>
       </div>
     </section>
   );

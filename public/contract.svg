@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="contractGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4338CA;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#7C3AED;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="40" height="40" rx="8" fill="url(#contractGrad)"/>
+  <g transform="translate(8, 8)" fill="#fff">
+    <rect x="2" y="2" width="20" height="20" rx="2" fill="none" stroke="#fff" stroke-width="2"/>
+    <path d="M6 8h12M6 12h8M6 16h10" stroke="#fff" stroke-width="1.5"/>
+    <circle cx="18" cy="18" r="3" fill="#FFD700"/>
+    <path d="M17 18h2M18 17v2" stroke="#4338CA" stroke-width="1"/>
+  </g>
+</svg>

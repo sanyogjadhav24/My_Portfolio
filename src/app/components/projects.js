@@ -3,7 +3,35 @@ import { motion } from "framer-motion";
 import { useState } from "react";
 
 const projects = [
-  // DIGITAL FORENSICS
+  // BLOCKCHAIN
+  {
+    title: "Decentralized Social Media Platform",
+    description: "A Web3 social media platform featuring IPFS for decentralized storage, Lit Protocol for encryption/decryption, post randomization algorithms, wallet authentication, zero-knowledge proof login, and semantic content analysis.",
+    category: "BLOCKCHAIN",
+    tech: ["React", "IPFS", "Lit Protocol", "Web3", "ZKP", "Solidity", "Ethereum"],
+    link: "#"
+  },
+  {
+    title: "Campaign Fundraiser DApp",
+    description: "A decentralized crowdfunding platform built on blockchain with smart contracts for transparent fund management, milestone-based releases, contributor verification, and automated fund distribution.",
+    category: "BLOCKCHAIN",
+    tech: ["Solidity", "Web3.js", "React", "Ethereum", "MetaMask", "IPFS"],
+    link: "#"
+  },
+  {
+    title: "Alumni Verification Platform",
+    description: "A blockchain-based verification system for alumni credentials using smart contracts for immutable record keeping, decentralized identity verification, and tamper-proof certificate validation.",
+    category: "BLOCKCHAIN",
+    tech: ["Solidity", "Web3", "React", "Ethereum", "Digital Certificates", "DID"],
+    link: "#"
+  },
+  {
+    title: "Krushi Sarjana",
+    description: "A comprehensive farmer-to-consumer platform featuring multilingual voice assistant, blockchain-based security to eliminate middlemen, and ML models for crop price and profit prediction. Empowers farmers with direct market access.",
+    category: "BLOCKCHAIN",
+    tech: ["Blockchain", "React", "ML Models", "Voice Assistant", "Multilingual AI", "Smart Contracts"],
+    link: "#"
+  },
 
   // WEB APP'S
   {
@@ -43,6 +71,13 @@ const projects = [
     tech: ["React", "JavaScript", "BFS Algorithm"],
     link: "https://github.com/sanyogjadhav24/MutualConnection"
   },
+  {
+    title: "Converge",
+    description: "Smart hackathon team formation platform that matches participants based on skills and technical background. Features hackathon event discovery, competition finder, and intelligent team recommendations for optimal collaboration.",
+    category: "WEB APP'S",
+    tech: ["React", "Node.js", "MongoDB", "ML Algorithms", "Firebase", "Recommendation System"],
+    link: "#"
+  },
 
   // MACHINE LEARNING
   {
@@ -72,7 +107,7 @@ const projects = [
   }
 ];
 
-const categories = ["ALL", "WEB APP'S", "Data Structure", "MACHINE LEARNING", "IOT", "MOBILE APPS"];
+const categories = ["ALL", "BLOCKCHAIN", "WEB APP'S", "Data Structure", "MACHINE LEARNING", "IOT", "MOBILE APPS"];
 
 export default function Projects() {
   const [selectedCategory, setSelectedCategory] = useState("ALL");

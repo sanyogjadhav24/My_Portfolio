@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="ipfsGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#65C2CB;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0B7EC8;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="40" height="40" rx="8" fill="url(#ipfsGrad)"/>
+  <g transform="translate(10, 10)">
+    <circle cx="10" cy="10" r="8" fill="none" stroke="#fff" stroke-width="2" opacity="0.8"/>
+    <circle cx="10" cy="5" r="2" fill="#fff"/>
+    <circle cx="5" cy="15" r="2" fill="#fff"/>
+    <circle cx="15" cy="15" r="2" fill="#fff"/>
+    <path d="M10 7L7 13M10 7L13 13M7 13h6" stroke="#fff" stroke-width="1.5" fill="none"/>
+  </g>
+</svg>

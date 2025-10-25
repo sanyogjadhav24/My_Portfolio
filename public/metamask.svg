@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="metamaskGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#F6851B;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#E2761B;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#CD6116;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="40" height="40" rx="8" fill="url(#metamaskGrad)"/>
+  <g transform="translate(8, 8)">
+    <path d="M20 2L12 8l-2-6 10 0z" fill="#E17726"/>
+    <path d="M4 2l8 6-2-6-6 0z" fill="#E27625"/>
+    <path d="M17 15l-2 3 4 1 1-4-3 0z" fill="#E27625"/>
+    <path d="M4 15l1 4 4-1-2-3-3 0z" fill="#E27625"/>
+    <path d="M9 10l-2 3h4l-2-3z" fill="#F5841F"/>
+    <path d="M15 10l-2 3h4l-2-3z" fill="#F5841F"/>
+  </g>
+</svg>
