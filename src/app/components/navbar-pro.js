@@ -22,7 +22,7 @@ const ProfessionalNavbar = () => {
 
   const socialLinks = [
     { icon: FaGithub, href: "https://github.com/sanyogjadhav24", label: "GitHub" },
-    { icon: FaLinkedin, href: "https://linkedin.com/in/sanyogjadhav24", label: "LinkedIn" },
+    { icon: FaLinkedin, href: "https://www.linkedin.com/in/sanyog-jadhav-295154258/", label: "LinkedIn" },
     { icon: FaTwitter, href: "https://twitter.com/sanyogjadhav24", label: "Twitter" },
   ];
 
