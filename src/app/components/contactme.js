@@ -39,7 +39,7 @@ const Contact = () => {
     { 
       icon: <FaLinkedin className="w-5 h-5" />, 
       label: "LinkedIn", 
-      href: "https://linkedin.com/in/sanyogjadhav24",
+      href: "https://www.linkedin.com/in/sanyog-jadhav-295154258/",
       color: "#0A66C2"
     },
     { 
